@@ -33,7 +33,7 @@ def normal():
     print("==========Normal Calculator==========")
     while True:
         arithmetics()
-        choice = input("Choose (1/2/3/4/5) or press q to quit: ").capitalize()
+        choice = input("Choose (1/2/3/4/5) or press q to quit: ").lower()
         if choice == "1":
             pass
         elif choice == "2":
@@ -44,7 +44,7 @@ def normal():
             pass
         elif choice == "5":
             break
-        elif choice == "Q":
+        elif choice == "q":
             sys.exit("Goodbye.")
         else:
             print("===Try again===")
@@ -67,17 +67,17 @@ def main():
             if choice == 1:
                 while True:
                     calculators()
-                    calc = input("Choose a calculator (1/2/3/4) or press q to quit: ").capitalize()
+                    calc = input("Choose a calculator (1/2/3/4) or press q to quit: ").lower()
                     if calc == "1":
                         while True:
                             print("==========Normal Calculator==========")
                             sub_menu()
-                            choice = input("Choose (1/2) or press q to quit: ").capitalize()
+                            choice = input("Choose (1/2) or press q to quit: ").lower()
                             if choice == "1":
                                 normal()
                             elif choice == "2":
                                 break
-                            elif choice == "Q":
+                            elif choice == "q":
                                 sys.exit("Goodbye.")
                             else:
                                 print("===Try again===")
@@ -85,12 +85,12 @@ def main():
                         while True:
                             print("==========Geometry Calculator==========")
                             sub_menu()
-                            choice = input("Choose (1/2) or press q to quit: ").capitalize()
+                            choice = input("Choose (1/2) or press q to quit: ").lower()
                             if choice == "1":
                                 geo()
                             elif choice == "2":
                                 break
-                            elif choice == "Q":
+                            elif choice == "q":
                                 sys.exit("Goodbye.")
                             else:
                                 print("===Try again===")
@@ -98,18 +98,18 @@ def main():
                         while True:
                             print("==========Trigonometry Calculator==========")
                             sub_menu()
-                            choice = input("Choose (1/2) or press q to quit: ").capitalize()
+                            choice = input("Choose (1/2) or press q to quit: ").lower()
                             if choice == "1":
                                 trigo()
                             elif choice == "2":
                                 break
-                            elif choice == "Q":
+                            elif choice == "q":
                                 sys.exit("Goodbye.")
                             else:
                                 print("===Try again===")
                     elif calc == "4":
                         break
-                    elif calc == "Q":
+                    elif calc == "q":
                         sys.exit("Goodbye.")
                     else:
                         print("===Try again===")
@@ -125,3 +125,4 @@ def main():
 
 
 main()
+

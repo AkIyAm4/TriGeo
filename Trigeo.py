@@ -48,8 +48,7 @@ def normal():
             sys.exit("Goodbye.")
         else:
             print("===Try again===")
-    pass
-
+            
 def geo():
     while True:
         print("==========Geometry Calculator==========")
@@ -123,5 +122,6 @@ def main():
                 print("===Try again===")
         except ValueError:
             print("=====Enter a valid input=====")
+
 
 main()

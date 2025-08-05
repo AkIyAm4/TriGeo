@@ -33,15 +33,56 @@ def normal():
     print("==========Normal Calculator==========")
     while True:
         arithmetics()
-        choice = input("Choose (1/2/3/4/5) or press q to quit: ").lower()
+        choice = input("Choose (1/2/3/4/5) or press q to quit: ").capitalize()
         if choice == "1":
-            pass
+            while True:
+                print("\n==========Addition==========")
+                num1 = float(input("What's the first number: "))
+                num2 = float(input("What's the second number: "))
+                num1 += num2
+                print(f"{num1}")
+                cont = input("Quit? (y/n): ").lower()
+                if cont == "y":
+                    break
+                elif cont == "n":
+                    continue
         elif choice == "2":
-            pass
+            while True:
+                print("\n==========Subtraction==========")
+                num1 = float(input("What's the first number: "))
+                num2 = float(input("What's the second number: "))
+                num1 -= num2
+                print(f"{num1}")
+                cont = input("Quit? (y/n): ").lower()
+                if cont == "y":
+                    break
+                elif cont == "n":
+                    continue
+
         elif choice == "3":
-            pass
+            while True:
+                print("\n==========Multiplication==========")
+                num1 = float(input("What's the first number: "))
+                num2 = float(input("What's the second number: "))
+                num1 *= num2
+                print(f"{num1}")
+                cont = input("Quit? (y/n): ").lower()
+                if cont == "y":
+                    break
+                elif cont == "n":
+                    continue
         elif choice == "4":
-            pass
+            while True:
+                print("\n==========Division==========")
+                num1 = float(input("What's the first number: "))
+                num2 = float(input("What's the second number: "))
+                num1 /= num2
+                print(f"{num1}")
+                cont = input("Quit? (y/n): ").lower()
+                if cont == "y":
+                    break
+                elif cont == "n":
+                    continue
         elif choice == "5":
             break
         elif choice == "q":
@@ -125,4 +166,5 @@ def main():
 
 
 main()
+
 

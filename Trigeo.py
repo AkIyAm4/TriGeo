@@ -2,21 +2,74 @@ import sys
 import math
 
 def calculators():
-    print("==========Calculators==========")
+    print("\n==========Calculators==========")
     print("1. Normal")
     print("2. Geometry")
     print("3. Trigonometry")
     print("4. Back")
 
 def show_menu():
-    print("==========TriGeo Calculator==========")
+    print("\n==========TriGeo Calculator==========")
     print("1. Calculators")
     print("2. Quiz")
     print("3. Quit")
 
 def quiz():
-    while True:
-        print("==========QUIZ==========")
+    questions = ["What is the value of 45 ÷ (3 × 3)?",
+                "What is 25% of 160?",
+                "If x = 4, what is the value of 2x²-3x+1?",
+                "What is the least common multiple (LCM) of 6 and 8?",
+                "Simplify: 3/5 + 2/10",
+                "What is the area of a triangle with base 10 cm and height 8 cm?",
+                "What is the area of a circle with radius 7 cm?",
+                "What is the area of a square with side length 12 cm?",
+                "A rectangle has a length of 15 cm and width of 6 cm. What is its area?",
+                "What is the area of a triangle with base 14 cm and height 5 cm?",
+                "What is the area of a scalene triangle with sides 7 cm, 8 cm, and 9 cm?",
+                "What is the area of an equilateral triangle with side 10 cm?",
+                "An isosceles triangle has two equal sides of 13 cm and a base of 10 cm. What is its area?",
+                "What is the area of a scalene triangle with sides 6 cm, 8 cm, and 10 cm?",
+                "What is the area of an equilateral triangle with side length 6 cm?",]
+    options = (("A. 5", "B. 6", "C. 4", "D. 3"),
+               ("A. 35", "B. 45", "C. 40", "D. 50"),
+               ("A. 21", "B. 25", "C. 19", "D. 24"),
+               ("A. 24", "B. 12", "C. 48", "D. 48"),
+               ("A. 5/10", "B. 4/5", "C. 1/2", "D. 7/10"),
+               ("A. 40 cm²", "B. 80 cm²", "C. 60 cm²", "D. 50 cm²"),
+               ("A. 154 cm²", "B. 144 cm²", "C. 147 cm²", "D. 132 cm²"),
+               ("A. 124 cm²", "B. 144 cm²", "C. 132 cm²", "D. 156 cm²"),
+               ("A. 90 cm²", "B. 80 cm²", "C. 85 cm²", "D. 96 cm²"),
+               ("A. 35 cm²", "B. 70 cm²", "C. 45 cm²", "D. 60 cm²"),
+               ("A. 26.83 cm²", "B. 30.05 cm²", "C. 28.15 cm²", "D. 31.2 cm²"),
+               ("A. 42.5 cm²", "B. 43.3 cm²", "C. 45.2 cm²", "D. 50.0 cm²"),
+               ("A. 72 cm²", "B. 60 cm²", "C. 65 cm²", "D. 62.4 cm²"),
+               ("A. 24 cm²", "B. 25.2 cm²", "C. 22.8 cm²", "D. 26.1 cm²"),
+               ("A. 15.6 cm²", "B. 16.5 cm²", "C. 15.59 cm²", "D. 17.2 cm²"))
+    answers = ("A", "C", "A", "A", "B", "D", "A", "B", "A", "A", "C", "B", "D", "A", "C")
+    guesses = []
+    ques_num = 0
+    score = 0
+    for question in questions:
+        print("\n==========QUIZ==========")
+        print("--------------------------------------------------------------------------------")
+        print(question)
+        for option in options[ques_num]:
+            print(option)
+        guess = input("Enter your answer (A/B/C/D): ").upper()
+        guesses.append(guess)
+        if guess == answers[ques_num]:
+            score += 1
+            print("CORRECT!")
+        else:
+            print("INCORRECT!")
+            print(f"{answers[ques_num]} is the correct answer.")
+        ques_num += 1
+
+    print()
+    if score >= 11:
+        print(f"Congratulations! Your score is {score}/{len(questions)}")
+    elif score < 11:
+        print(f"Your score is {score}/{len(questions)}. There's still room for improvement")
 
 def sub_menu():
     print("1. Start")
@@ -332,4 +385,5 @@ def main():
             print("=====Enter a valid input=====")
 
 main()
+
 

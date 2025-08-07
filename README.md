@@ -7,11 +7,11 @@ Geometry and trigonometry calculator and quiz game combined in one program.
 
 - The on file user interface of the calculator-quiz program.
 - Normal, geometry, and trigonometry calculators which for now only solves the area of a given plan or solid.
+- A quiz section.
 
 ## Upcoming Features:
 
 - Features that would calculate some other possible missing values, not just the area.
-- A complete quiz that shows your score to you.
 
 ## Additional Improvements:
 

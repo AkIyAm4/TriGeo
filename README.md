@@ -1,8 +1,6 @@
 # TriGeo
 Geometry and trigonometry calculator and quiz game combined in one program.
 
-- This beginner project is still under work. About 80% progress have been made.
-
 ## Current Features:
 
 - The on file user interface of the calculator-quiz program.

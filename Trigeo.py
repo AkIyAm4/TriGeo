@@ -70,7 +70,8 @@ def quiz():
         print(f"Congratulations! Your score is {score}/{len(questions)}")
     elif score < 11:
         print(f"Your score is {score}/{len(questions)}. There's still room for improvement")
-
+    elif score == 15:
+        print(f"Excellent job! You got a perfect score!")
 def sub_menu():
     print("1. Start")
     print("2. Back")
@@ -385,5 +386,6 @@ def main():
             print("=====Enter a valid input=====")
 
 main()
+
 
 

@@ -17,3 +17,4 @@ Geometry and trigonometry calculator and quiz game combined in one program.
 - User-interface with front-end tools
 - Solid figures and some other plane figures
 - A feature that would allow users to input as many numbers in the normal calculator they want
+- Timer for quiz section
